@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- created by Kiana Du -->
+    <title>Conatct</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Yeseva One|Josefin Sans|Simonetta|lato|Elsie Swash Caps">
+    <style>
+      body {
+        background-color: #EFE3D9
+      }
+
+      .container {
+        width: 1200px;
+        margin: 55px 120px 55px 120px;
+        content: center;
+      }
+
+      .nav-link {
+        color: #000000;
+        font-size: 16px;
+        font-family: "Lato", Monospace;
+        padding: 10px 20px;
+        border-radius: 23px;
+        border: 2px solid transparent;
+        text-decoration: none;
+      }
+
+      .nav-link:hover {
+        border-color: #A78165;
+        font-weight: bold;
+        color: #A78165;
+      }
+
+      .header-nav {
+        display: flex;
+        justify-content: flex-end;
+        gap: 30px;
+        margin-right: 30px;
+      }
+
+      .footer-nav {
+        display: flex;
+        gap: 30px;
+        margin-left: 30px;
+        margin-top: 100px;
+      }
+
+      .hero {
+        margin-top: 200px;
+        margin-left: 50px;
+      }
+
+      .hero h1 {
+        margin-top: 120px;
+        font-family: "Yeseva One", serif;
+        font-size: 40px;
+        color: #000000;
+        font-weight: normal;
+        margin-bottom: 3px;
+      }
+
+      .hero p {
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 24px;
+        color: #A78165;
+      }
+
+      .contact-card {
+        width: 800px;
+        height: 900px;
+        align-items: center;
+        display: flex;
+        margin: 150px auto;
+        background-color: #E6CDBA;
+        border-radius: 23px;
+        gap: 80px;
+
+      }
+
+      .contact-text h2 {
+        font-family: "Yeseva One", serif;
+        font-size: 30px;
+        color: #000000;
+        font-weight: normal;
+      }
+
+      input,
+      textarea {
+        width: 350px;
+        border: none;
+        border-radius: 15px;
+        padding: 12px 16px;
+        margin-bottom: 40px;
+        font-family: "Simonetta", serif;
+        font-size: 18px;
+        outline: none;
+      }
+
+      textarea {
+        height: 120px;
+        resize: none;
+      }
+
+      .contact-image {
+        width: 410px;
+        height: 614px;
+        border-radius: 30px;
+        margin-left: -200px;
+      }
+
+     
+
+      .send-btn {
+        background-color: #A78165;
+        color: white;
+        border-radius: 15px;
+        border: none;
+        text-align: center;
+        font-size: 20px;
+        padding: 15px 20px;
+        cursor: pointer;
+        margin-left: auto;
+        margin-top: 50px;
+        display: block;
+      }
+
+      .send-btn:hover {
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.6)
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+
+      <nav class="header-nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="#Resume">Resume</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+
+      <div class="hero">
+        <h1>Get In Touch!</h1>
+        <p>Let’s turn ideas into thoughtful experiences</p>
+      </div>
+
+      <div class="contact-card">
+        <img class="contact-image" src="https://i.postimg.cc/wvXyGx17/Untitled-2.webp" alt="a nature pic of treees taken by the web builder">
+        <div class="contact-text">
+          <h2>Email</h2>
+          <input type="email" placeholder="Your email">
+
+          <h2>Name</h2>
+          <input type="text" placeholder="Your name">
+
+          <h2>Message</h2>
+          <textarea placeholder="Write your message here"></textarea>
+          <button class="send-btn">Send</button>
+        </div>
+      </div>
+
+      <nav class="footer-nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="#Resume">Resume</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </body>
+</html>
