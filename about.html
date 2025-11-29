@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <!-- created by Kiana Du -->
-    <title>Kiana Du's Portfolio</title>
+    <title>About</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Yeseva One|Josefin Sans|Simonetta|lato|Elsie Swash Caps">
     <style>
       body {
@@ -41,177 +41,287 @@
 
       .footer-nav {
         display: flex;
- gap: 30px;
+        gap: 30px;
         margin-left: 30px;
+        margin-top: 150px;
       }
 
-      .hero {
-        margin-top: 200px;
-        margin-bottom: 200px;
-        text-align: center;
-      }
-
-      .hero-name {
-        font-family: "Yeseva One", 'Lato', sans-serif;
-        font-size: 128px;
-        font-weight: normal;
-        color: #A78165;
-        margin: auto;
-      }
-
-      .hero-desc {
-        font-family: 'Elsie Swash Caps', cursive;
-        font-size: 18px;
-        color: #000000;
-        max-width: 500px;
-        margin: 10px auto;
-      }
-
-      .portfolio-section {
-        margin: 150px auto;
-
-      }
-
-      .card {
-        width: 800px;
-        height: 400px;
-        background-color: #E6CDBA;
-        border-radius: 23px;
-        cursor: pointer;
-        margin: 75px auto;
+      .intro {
         display: flex;
-        gap: 50px;
+        gap: 80px;
         align-items: center;
+        margin-top: 100px;
+        padding: 60px 80px;
       }
 
-      .card:hover {
- box-shadow: 10px 10px 5px grey;
-        transform: translateY(-10px);
-      }
-
-      .card-img {
-        width: 450px;
-        height: 300px;
-        border-radius: 30px;
-        margin-left: -100px;
-      }
-
-      .card-text {
-        text-align: left;
-        max-width: 400px;
-        margin-right: 50px;
-      }
-
-      .card-text h2 {
-        font-family: "Yeseva One", serif;
-        font-size: 40px;
-        color: #000000;
-        font-weight: normal;
-        margin-bottom: 3px;
-      }
-
-      .card-text h3 {
+      .intro-text h1 {
         font-family: "Josefin Sans", sans-serif;
         font-size: 24px;
         color: #A78165;
         margin-bottom: 30px;
+        font-weight: bold;
       }
 
-      .card-text p {
-        font-family: "Simonetta", serif;
+      .intro-img {
+        width: 350px;
+        height: 460px;
+        border-radius: 20px;
+      }
+
+      .intro-text p {
+        font-family: "Elsie Swash Caps", serif;
         font-size: 18px;
-        color: #000000;
+        line-height: 1.8;
+        max-width: 520px;
       }
 
-      .contact {
-        text-align: center;
-        margin: 150px 0px;
+      .education {
+        margin-top: 100px;
+        margin-left: 80px;
       }
 
-      .contact h2 {
-  font-family: "Yeseva One", serif;
-        font-size: 40px;
-        color: #000000;
-        font-weight: normal;
-      }
-
-      .contact h3 {
+      .education h2 {
         font-family: "Josefin Sans", sans-serif;
         font-size: 24px;
         color: #A78165;
+        margin-bottom: 30px;
+        font-weight: bold;
       }
 
-      .contact button {
-        background-color: #A78165;
-        color: white;
-        border-radius: 20px;
-        border: none;
-        text-align: center;
-        font-size: 20px;
-        padding: 15px 20px;
+      .education h3 {
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 24px;
+        color: 00000;
+        font-weight: bold;
+        margin-bottom: 8px;
+        margin-left: 40px;
       }
 
-      .contact button:hover {
-        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.6)
+      .education li {
+        font-family: "Simonetta", serif;
+        font-size: 18px;
+        color: #000000;
+        margin-left: 40px;
+      }
+
+      .skills {
+        margin-top: 100px;
+        margin-left: 80px;
+      }
+.skills-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 60px;
+      }
+      .skills h2 {
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 24px;
+        color: #A78165;
+        margin-bottom: 30px;
+        font-weight: bold;
+      }
+
+      .skills-grid h3 {
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 24px;
+        color: 00000;
+        font-weight: bold;
+        margin-left: 40px;
+        margin-bottom: 8px;
+      }
+
+      .skills-grid li {
+        font-family: "Simonetta", serif;
+        font-size: 18px;
+        color: #000000;
+        margin-left: 10px;
+      }
+
+      .experience {
+        width: 760px;
+        height: 870px;
+        margin-top: 100px;
+        margin-left: 80px;
+      }
+
+      .row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+      .dot {
+  position: absolute;
+  margin-left: 25px;
+  margin-top: 10px; 
+  width: 25px;
+  height: 25px;
+  background-color: E6CDBA;
+  border-radius: 100%;
+        z-index: 1;
+}
+
+      .experience h2 {
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 24px;
+        color: #A78165;
+        margin-bottom: 40px;
+        font-weight: bold;
+      }
+
+      .timeline h3 {
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 24px;
+        color: #000000;
+        margin-bottom: 8px;
+        font-weight: bold;
+        margin-left: 40px;
+        z-index: 3;
+      }
+      .timeline p {
+        font-family: "Simonetta", serif;
+        font-size: 18px;
+        color: #000000;
+        margin-bottom: 40px;
+        margin-left: 50px;
+      }
+
+      .date {
+        float: right;
+        font-family: "Simonetta", serif;
+        font-size: 18px;
+        color: #000000;
+        margin-right: 40px;
       }
     </style>
   </head>
   <body>
     <div class="container">
-        <nav class="header-nav">
+
+      <nav class="header-nav">
         <a class="nav-link" href="index.html">Home</a>
         <a class="nav-link" href="about.html">About</a>
-        <a class="nav-link" href="#Resume">Resume</a>
-        <a class="nav-link" href="#Contact">Contact</a>
+        <a class="nav-link" href="contact.html">Contact</a>
       </nav>
-      <div class="hero">
-        <h1 class="hero-name">Kiana Du</h1>
-        <p class="hero-desc">
-          I am a creative UX/UI designer blending research, code and visuals to craft thoughtful, creative and user-centred experience.
-        </p>
-      </div>
-
-      <div class="portfolio-section">
- <div class="card">
-          <img class="card-img" src="https://i.postimg.cc/wvXyGx17/Untitled-2.webp" alt="project1 thumbnail" width="470" height="300">
-          <div class="card-text">
-            <h2>AccessEd</h2>
-            <h3>UI Design</h3>
-            <p>Empowering inclusive learning for all with accessible tools and community support</p>
-          </div>
-        </div>
-
-        <div class="card">
-
-          <img class="card-img" src="https://i.postimg.cc/sDDm7qLW/Screenshot-2025-05-02-at-12-41-42-PM.webp" alt="project1 thumbnail" width="470" height="300">
-          <div class="card-text">
-            <h2>Design Bloom</h2>
-            <h3>Photography / Magazine Design</h3>
-            <p>A visual and reflective journey through my growth as a designer</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img class="card-img" src="https://i.postimg.cc/d3d9VcNz/Screenshot-2025-11-20-at-12-42-09-PM.png" alt="project1 thumbnail" width="470" height="300">
-          <div class="card-text">
-            <h2>Coinamatic Website Redesign</h2>
-            <h3>UX/UI Redesign</h3>
-            <p>A user-centred redesign that simplifies services and enhances clarity through improved navigation and hierarchy.</p>
-          </div>
+      <div class="intro">
+        <img class="intro-img" src="https://i.postimg.cc/hPW2zWFL/IMG-3832.avif" alt="Webside builder's vertical picture">
+        <div class="intro-text">
+          <h1>Hi, I am Kiana</h1>
+          <p>
+            I’m a UX/UI designer with full passion about creating thoughtful, intuitive experiences that make people feel understood and supported. With a Computing minor, it helps me bridge creativity with technical understanding. I love turning complex problems into simple, meaningful interactions that genuinely improve the user experience. I’m always exploring better ways to connect design, technology, and human needs through thoughtful design decisions.
+          </p>
         </div>
       </div>
-      <div class="contact">
-        <h2>Get in touch for opportunities<br>or just to say hi!</h2>
-        <h3>q23du@uwaterloo.ca</h3>
-        <button>Let’s Connect!</button>
+
+      <div class="education">
+        <h2>Education</h2>
+        <h3>University of Waterloo</h3>
+        <ul>
+          <li>Global Business and Digital Art</li>
+          <li>Minor of computing</li>
+        </ul>
       </div>
+
+
+
+      <div class="skills">
+        <h2>Skills</h2>
+
+        <div class="skills-grid">
+
+          <div>
+            <h3>Design</h3>
+            <ul>
+              <li>Figma</li>
+              <li>Photoshop</li>
+              <li>Indesign</li>
+              <li>Illustrator</li>
+              <li>Premiere Pro</li>
+              <li>Procreate</li>
+              <li>Abode Audition</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>UX/UI</h3>
+            <ul>
+              <li>UI Design</li>
+              <li>UX Design</li>
+              <li>HTML/CSS</li>
+              <li>Prototyping</li>
+              <li>Wireframing</li>
+              <li>Branding</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Coding</h3>
+            <ul>
+              <li>Github</li>
+              <li>Python</li>
+              <li>Racket</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <section class="experience">
+        <h2>Experience</h2>
+
+        <div class="timeline">      
+            <div class="row">
+              <h3>Kul tekst</h3>
+              <span class="dot"></span>
+              <span class="date">Sep, 2025 – Present</span>
+            </div>
+            <p>Magazine designer</p>
+         
+          </div>
+
+
+          <div class="timeline">
+            <div class="row">
+            <h3>UW Film Club</h3>
+              <span class="dot"></span>
+              <span class="date">May, 2025 – Present</span>
+              </div>
+            <p>Graphic Designer, Executive Team</p>
+          </div>
+
+          <div class="timeline">
+            <div class="row">
+            <h3>Craft 4 Charity</h3>
+              <span class="dot"></span>
+              <span class="date">May, 2025 – Present</span>
+              </div>
+            <p>Graphic Designer, Executive Team</p>
+          </div>
+
+          <div class="timeline">
+            <div class="row">
+            <h3>GNEC Hackathons</h3>
+              <span class="dot"></span>
+              <span class="date">April, 2025</span>
+              </div>
+            <p>UXUI designer</p>
+          </div>
+        
+          <div class="timeline">
+            <div class="row">
+            <h3>SacHacks</h3>
+              <span class="dot"></span>
+              <span class="date">Feb, 2025</span>
+              </div>
+            <p>UI designer</p>
+          </div>
+      </section>
+
       <nav class="footer-nav">
-<a class="nav-link" href="#about">About</a>
-        <a class="nav-link" href="#projects">Projects</a>
-        <a class="nav-link" href="#contact">Contact</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="index.html">Projects</a>
+        <a class="nav-link" href="contact.html">Contact</a>
       </nav>
     </div>
   </body>
-
 </html>
-
