@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- created by Kiana Du -->
+    <title>AccessEd – Project Case Study</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Yeseva One|Josefin Sans|Simonetta|lato|Elsie Swash Caps">
+    <style>
+      body {
+        background-color: #EFE3D9
+      }
+
+      .container {
+        width: 1200px;
+        margin: 55px 120px 55px 120px;
+      }
+
+      .nav-link {
+        color: #000000;
+        font-size: 16px;
+        font-family: "Lato", Monospace;
+        padding: 10px 20px;
+        border-radius: 23px;
+        border: 2px solid transparent;
+        text-decoration: none;
+      }
+
+      .nav-link:hover {
+        border-color: #A78165;
+        font-weight: bold;
+        color: #A78165;
+      }
+
+      .header-nav {
+        display: flex;
+        justify-content: flex-end;
+        gap: 30px;
+        margin-right: 30px;
+      }
+
+      .footer-nav {
+        display: flex;
+        gap: 30px;
+        margin-left: 30px;
+      }
+
+      .hero {
+        padding: 120px 100px 120px 100px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: center;
+        margin-top: 50px;
+      }
+
+      .hero h1 {
+        font-family: Yeseva One, serif;
+        font-size: 40px;
+        margin-bottom: 8px;
+        font-weight: normal;
+      }
+
+      .hero h2 {
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 24px;
+        color: #A78165;
+        margin-bottom: 24px;
+      }
+
+      .pill {
+        display: inline-block;
+        background: #E6CDBA;
+        padding: 6px 14px;
+        border-radius: 20px;
+        margin-right: 8px;
+        font-family: "Simonetta", serif;
+        font-size: 20px;
+        color: #000000;
+      }
+
+      .hero img {
+        border-radius: 20px;
+      }
+
+      .main {
+        display: grid;
+        grid-template-columns: 120px 1fr;
+        gap: 100px;
+        padding: 100px 0;
+        align-items: start;
+      }
+
+      .sidebar {
+        position: sticky;
+        top: 120px;
+        font-family: Josefin Sans, sans-serif;
+        font-size: 18px;
+      }
+
+      .sidebar a {
+        display: block;
+        margin-bottom: 18px;
+        text-decoration: none;
+        color: #000000;
+        transition: 0.1s ease;
+      }
+
+      .sidebar a:hover {
+        color: #A78165;
+        text-decoration: underline;
+      }
+
+      .divider {
+        height: 1px;
+        background: #E0CDBD;
+        margin-top: 50px;
+      }
+
+      .content {
+        max-width: 720px;
+        margin-bottom: 100px;
+        animation: fadeUp 0.8s ease both;
+
+      }
+
+      .content h2 {
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 24px;
+        color: #A78165;
+        margin-bottom: 30px;
+      }
+
+      .content p {
+        font-family: "Simonetta", serif;
+        font-size: 18px;
+        color: #000000;
+      }
+
+      .highlight-row {
+        display: grid;
+        grid-template-columns: 360px 1fr;
+        gap: 60px;
+        align-items: center;
+        margin-bottom: 120px;
+      }
+
+      .highlight-row img:not(.highlight-row2) {
+        width: 400px;
+        height: 400px;
+      }
+
+      .highlight-text ul {
+        padding-left: 24px;
+        color: #A78165;
+      }
+
+      .highlight-text li {
+        margin-bottom: 40px;
+      }
+
+      .highlight-text h3 {
+        color: #A78165;
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 20px;
+        margin-bottom: 8px;
+      }
+
+      .highlight-text p {
+        margin: 0;
+        font-family: "Simonetta", serif;
+        font-size: 18px;
+        line-height: 1.2;
+      }
+
+      .highlight-gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        margin-bottom: 28px;
+      }
+
+      .highlight-row2 {
+        width: 240px;
+        height: auto;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="header-nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="#Resume">Resume</a>
+        <a class="nav-link" href="conatct.html">Contact</a>
+      </nav>
+
+      <section class="hero">
+        <div>
+          <h1>AccessEd</h1>
+          <h2>UI Design / Branding</h2>
+          <span class="pill">Figma</span>
+          <span class="pill">April 2025</span>
+        </div>
+        <div>
+          <img class="card-img" src="https://i.postimg.cc/wvXyGx17/Untitled-2.webp" alt="project1 thumbnail" width="470" height="300">
+        </div>
+      </section>
+
+      <section class="main">
+
+        <aside class="sidebar">
+          <a href="#overview">01. Overview</a>
+          <a href="#problem">02. Problem</a>
+          <a href="#challenges">03. Challenges</a>
+          <a href="#highlights">04. Highlights</a>
+        </aside>
+
+        <div>
+          <section id="overview" class="content">
+            <h2>01. Overview</h2>
+            <p>
+              AccessEd is a mobile app designed to support users with visual and auditory impairments through simple and inclusive accessibility tools. It uses AI, text-to-speech, and webpage content analysis to help users access educational content more easily and independently.
+            </p>
+            <div class="divider"></div>
+          </section>
+
+          <section id="problem" class="content">
+            <h2>02. Problem</h2>
+            <p>
+              AccessEd was inspired by real conversations with individuals who rely on their smartphones as their main gateway to the digital world. In many countries with aging populations, we often see the struggles elder adults face when accessing the internet. We also observed that vision-related accessibility needs are common, even among youth, ranging from small, unreadable text to poorly integrated screen reader support. These insights made it clear that accessibility isn’t just a feature—it's a foundation. With this in mind, we set out to create a solution that prioritizes digital equity on mobile, ensuring every interaction is clear, intuitive, and respectful of diverse user needs.
+            </p>
+            <div class="divider"></div>
+          </section>
+
+          <section id="challenges" class="content">
+            <h2>03. Challenge</h2>
+            <p>
+              Collaborating with a unified vision was our main challenge. As university students, we find it challenging to schedule meetings , especially with our very different time zones. With our lack of meetings, we had to individually develop features, our vision of this project developed separately from each other.
+            </p>
+            <div class="divider"></div>
+          </section>
+
+          <section id="highlights" class="content">
+            <h2>04. Highlights</h2>
+
+            <div class="highlight-row">
+              <img src="https://i.postimg.cc/C5syZSxd/Group-250.png" alt="cusor design, and signin page">
+              <div class="highlight-text">
+                <ul>
+                  <li>
+                    <h3>High-Contrast Visual Cues</h3>
+                    <p>
+                      Interactive elements like buttons and links are outlined with bold, coloured borders when hovered, improving visibility for low-vision users.
+                    </p>
+                  </li>
+
+                  <li>
+                    <h3>Touch-Responsive Screen Reader</h3>
+                    <p>Tapping any text or widget reads it aloud; a double-tap confirms and activates the element.
+                    </p>
+                  </li>
+
+                  <li>
+                    <h3>Bigger Cursor</h3>
+                    <p>
+                      Enlarged, easy-to-see indicators guide users through touch interactions, replacing the concept of a traditional "cursor."
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="highlight-gallery">
+              <img src="https://i.postimg.cc/tJTLCTgf/Text-to-speech.png" alt="Text-to-speech page" width="240" height="520">
+              <img src="https://i.postimg.cc/0ygHhZ7L/Video.png" alt="Speech page" width="240" height="520">
+              <img src="https://i.postimg.cc/0N5gHcsv/Speed-control.png" alt="Speed contral bar" width="240" height="520">
+              <img src="https://i.postimg.cc/0ygHhZ7L/Video.png" alt="Video Page" width="240" height="520">
+            </div>
+
+            <div class="highlight-text">
+              <ul>
+                <li>
+                  <h3>Inclusive Learning Hub</h3>
+                  <p>
+                    AccessEd allows users to input or upload text, which can then be converted into text-to-speech or sign language video for easier access. Combined with clean and simple layouts, this feature helps users choose the format that works best for their learning needs.
+                  </p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="highlight-row">
+              <img class="highlight-row2" src="https://i.postimg.cc/qMGjZ0My/Chat.png" alt="contact page">
+              <div class="highlight-text">
+                <ul>
+                  <li>
+                    <h3>Community &amp Support</h3>
+                    <p> Built-in forums allow users to ask questions, share experiences, and support each other, helping to create a sense of belonging and peer connection.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="highlight-gallery">
+              <img src="https://i.postimg.cc/N00Xfvc3/Schoraship.png" alt="Scholarship page for users" width="240" height="520">
+              <img src="https://i.postimg.cc/zX1RHgN0/sponser.png" alt="Sponser page" width="240" height="520">
+              <img src="https://i.postimg.cc/5y5ySsJF/sponser-form.png" alt="Sponsor need to fill put the form for basic infos" width="240" height="520">
+            </div>
+
+            <div class="highlight-text">
+              <ul>
+                <li>
+                  <h3>Inclusive Learning Hub</h3>
+                  <p>
+                    AccessEd connects users with scholarships, mentorship, and internship opportunities that support both academic and personal growth. Users can apply for available scholarships, while individuals and organizations can create scholarships, offer mentorship, or provide internships to give back and support the learning community.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <nav class="footer-nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="resume.html">Resume</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+    </div>
+    
+  </body>
+
+</html>
