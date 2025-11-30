@@ -82,11 +82,38 @@
         border-radius: 20px;
       }
 
+      .scroll-indicator {
+        margin-top: 60px;
+        text-align: center;
+        font-family: "Josefin Sans", sans-serif;
+        color: #A78165;
+        opacity: 90%;
+        margin-left: auto;
+      }
+
+
+      .scroll-indicator p {
+        font-size: 18px;
+      }
+
+      .arrow {
+        font-size: 28px;
+        text-decoration: none;
+        color: #A78165;
+        display: inline-block;
+        animation: bounce 1.6s infinite;
+      }
+
+      .arrow:hover {
+        transform: translateY(4px) scale(1.1);
+        color: #000000;
+      }
+
       .main {
         display: grid;
         grid-template-columns: 120px 1fr;
         gap: 100px;
-        padding: 100px 0;
+        padding: 200px 0;
         align-items: start;
       }
 
@@ -117,8 +144,8 @@
       }
 
       .content {
-        max-width: 720px;
-        margin-bottom: 100px;
+        max-width: 850px;
+        margin-bottom: 50px;
         animation: fadeUp 0.8s ease both;
 
       }
@@ -134,6 +161,8 @@
         font-family: "Simonetta", serif;
         font-size: 18px;
         color: #000000;
+        line-height: 1.5;
+        margin-bottom: 80px;
       }
 
       .highlight-row {
@@ -141,7 +170,6 @@
         grid-template-columns: 360px 1fr;
         gap: 60px;
         align-items: center;
-        margin-bottom: 120px;
       }
 
       .highlight-row img:not(.highlight-row2) {
@@ -169,20 +197,31 @@
         margin: 0;
         font-family: "Simonetta", serif;
         font-size: 18px;
-        line-height: 1.2;
+        line-height: 1.4;
+      }
+
+      .highlight-pair {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
       }
 
       .highlight-gallery {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 24px;
-        margin-bottom: 28px;
       }
 
       .highlight-row2 {
         width: 240px;
         height: auto;
         display: block;
+      }
+
+      .highlights-stack {
+        display: flex;
+        flex-direction: column;
+        gap: 150px;
       }
     </style>
   </head>
@@ -207,6 +246,11 @@
         </div>
       </section>
 
+      <div class="scroll-indicator">
+          <p>See how AccessEd works</p>
+          <a href="#overview" class="arrow">↓</a>
+        </div>
+      
       <section class="main">
 
         <aside class="sidebar">
@@ -243,80 +287,85 @@
 
           <section id="highlights" class="content">
             <h2>04. Highlights</h2>
+            <div class="highlights-stack">
+              <div class="highlight-row">
+                <img src="https://i.postimg.cc/C5syZSxd/Group-250.png" alt="cusor design, and signin page">
+                <div class="highlight-text">
+                  <ul>
+                    <li>
+                      <h3>High-Contrast Visual Cues</h3>
+                      <p>
+                        Interactive elements like buttons and links are outlined with bold, coloured borders when hovered, improving visibility for low-vision users.
+                      </p>
+                    </li>
 
-            <div class="highlight-row">
-              <img src="https://i.postimg.cc/C5syZSxd/Group-250.png" alt="cusor design, and signin page">
-              <div class="highlight-text">
-                <ul>
-                  <li>
-                    <h3>High-Contrast Visual Cues</h3>
-                    <p>
-                      Interactive elements like buttons and links are outlined with bold, coloured borders when hovered, improving visibility for low-vision users.
-                    </p>
-                  </li>
+                    <li>
+                      <h3>Touch-Responsive Screen Reader</h3>
+                      <p>Tapping any text or widget reads it aloud; a double-tap confirms and activates the element.
+                      </p>
+                    </li>
 
-                  <li>
-                    <h3>Touch-Responsive Screen Reader</h3>
-                    <p>Tapping any text or widget reads it aloud; a double-tap confirms and activates the element.
-                    </p>
-                  </li>
-
-                  <li>
-                    <h3>Bigger Cursor</h3>
-                    <p>
-                      Enlarged, easy-to-see indicators guide users through touch interactions, replacing the concept of a traditional "cursor."
-                    </p>
-                  </li>
-                </ul>
+                    <li>
+                      <h3>Bigger Cursor</h3>
+                      <p>
+                        Enlarged, easy-to-see indicators guide users through touch interactions, replacing the concept of a traditional "cursor."
+                      </p>
+                    </li>
+                  </ul>
+                </div>
               </div>
-            </div>
 
-            <div class="highlight-gallery">
-              <img src="https://i.postimg.cc/tJTLCTgf/Text-to-speech.png" alt="Text-to-speech page" width="240" height="520">
-              <img src="https://i.postimg.cc/0ygHhZ7L/Video.png" alt="Speech page" width="240" height="520">
-              <img src="https://i.postimg.cc/0N5gHcsv/Speed-control.png" alt="Speed contral bar" width="240" height="520">
-              <img src="https://i.postimg.cc/0ygHhZ7L/Video.png" alt="Video Page" width="240" height="520">
-            </div>
+              <div class="highlight-pair">
+                <div class="highlight-gallery">
+                  <img src="https://i.postimg.cc/tJTLCTgf/Text-to-speech.png" alt="Text-to-speech page" width="240" height="520">
+                  <img src="https://i.postimg.cc/0ygHhZ7L/Video.png" alt="Speech page" width="240" height="520">
+                  <img src="https://i.postimg.cc/0N5gHcsv/Speed-control.png" alt="Speed contral bar" width="240" height="520">
+                  <img src="https://i.postimg.cc/0ygHhZ7L/Video.png" alt="Video Page" width="240" height="520">
+                </div>
 
-            <div class="highlight-text">
-              <ul>
-                <li>
-                  <h3>Inclusive Learning Hub</h3>
-                  <p>
-                    AccessEd allows users to input or upload text, which can then be converted into text-to-speech or sign language video for easier access. Combined with clean and simple layouts, this feature helps users choose the format that works best for their learning needs.
-                  </p>
-                </li>
-              </ul>
-            </div>
-
-            <div class="highlight-row">
-              <img class="highlight-row2" src="https://i.postimg.cc/qMGjZ0My/Chat.png" alt="contact page">
-              <div class="highlight-text">
-                <ul>
-                  <li>
-                    <h3>Community &amp Support</h3>
-                    <p> Built-in forums allow users to ask questions, share experiences, and support each other, helping to create a sense of belonging and peer connection.
-                    </p>
-                  </li>
-                </ul>
+                <div class="highlight-text">
+                  <ul>
+                    <li>
+                      <h3>Inclusive Learning Hub</h3>
+                      <p>
+                        AccessEd allows users to input or upload text, which can then be converted into text-to-speech or sign language video for easier access. Combined with clean and simple layouts, this feature helps users choose the format that works best for their learning needs.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
               </div>
-            </div>
 
-            <div class="highlight-gallery">
-              <img src="https://i.postimg.cc/N00Xfvc3/Schoraship.png" alt="Scholarship page for users" width="240" height="520">
-              <img src="https://i.postimg.cc/zX1RHgN0/sponser.png" alt="Sponser page" width="240" height="520">
-              <img src="https://i.postimg.cc/5y5ySsJF/sponser-form.png" alt="Sponsor need to fill put the form for basic infos" width="240" height="520">
-            </div>
+              <div class="highlight-row">
+                <img class="highlight-row2" src="https://i.postimg.cc/qMGjZ0My/Chat.png" alt="contact page">
+                <div class="highlight-text">
+                  <ul>
+                    <li>
+                      <h3>Community &amp Support</h3>
+                      <p> Built-in forums allow users to ask questions, share experiences, and support each other, helping to create a sense of belonging and peer connection.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
 
-            <div class="highlight-text">
-              <ul>
-                <li>
-                  <h3>Inclusive Learning Hub</h3>
-                  <p>
-                    AccessEd connects users with scholarships, mentorship, and internship opportunities that support both academic and personal growth. Users can apply for available scholarships, while individuals and organizations can create scholarships, offer mentorship, or provide internships to give back and support the learning community.
-                  </p>
-                </li>
-              </ul>
+              <div class="highlight-pair">
+                <div class="highlight-gallery">
+                  <img src="https://i.postimg.cc/N00Xfvc3/Schoraship.png" alt="Scholarship page for users" width="240" height="520">
+                  <img src="https://i.postimg.cc/zX1RHgN0/sponser.png" alt="Sponser page" width="240" height="520">
+                  <img src="https://i.postimg.cc/5y5ySsJF/sponser-form.png" alt="Sponsor need to fill put the form for basic infos" width="240" height="520">
+                </div>
+
+                <div class="highlight-text">
+                  <ul>
+                    <li>
+                      <h3>Inclusive Learning Hub</h3>
+                      <p>
+                        AccessEd connects users with scholarships, mentorship, and internship opportunities that support both academic and personal growth. Users can apply for available scholarships, while individuals and organizations can create scholarships, offer mentorship, or provide internships to give back and support the learning community.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </section>
         </div>
@@ -328,7 +377,6 @@
         <a class="nav-link" href="contact.html">Contact</a>
       </nav>
     </div>
-    
   </body>
 
 </html>
