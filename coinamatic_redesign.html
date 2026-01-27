@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- created by Kiana Du -->
+    <title>Coinmatic redesign – Project Case Study</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Yeseva One|Josefin Sans|Simonetta|Lato|Elsie Swash Caps">
+    <style>
+      body {
+        background-color: #EFE3D9
+      }
+
+      .container {
+        width: 1200px;
+        margin: 55px 120px 55px 120px;
+      }
+
+      .nav-link {
+        color: #000000;
+        font-size: 16px;
+        font-family: "Lato", Monospace;
+        padding: 10px 20px;
+        border-radius: 23px;
+        border: 2px solid transparent;
+        text-decoration: none;
+      }
+
+      .nav-link:hover {
+        border-color: #A78165;
+        font-weight: bold;
+        color: #A78165;
+      }
+
+      .header-nav {
+        display: flex;
+        justify-content: flex-end;
+        gap: 30px;
+        margin-right: 30px;
+      }
+
+      .footer-nav {
+        display: flex;
+        gap: 30px;
+        margin-left: 30px;
+      }
+
+      .hero {
+        padding: 100px 130px 100px 130px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        margin-top: 50px;
+      }
+
+      .hero h1 {
+        font-family: Yeseva One, serif;
+        font-size: 40px;
+        margin-bottom: 8px;
+        font-weight: normal;
+      }
+
+      .hero h2 {
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 24px;
+        color: #A78165;
+        margin-bottom: 24px;
+      }
+
+      .pill {
+        display: inline-block;
+        background: #E6CDBA;
+        padding: 6px 14px;
+        border-radius: 20px;
+        margin-right: 8px;
+        font-family: "Simonetta", serif;
+        font-size: 20px;
+        color: #000000;
+      }
+
+      .hero img {
+        border-radius: 20px;
+      }
+
+      .scroll-indicator {
+        margin-top: 60px;
+        text-align: center;
+        font-family: "Josefin Sans", sans-serif;
+        color: #A78165;
+        opacity: 90%;
+        margin-left: auto;
+      }
+
+
+      .scroll-indicator p {
+        font-size: 18px;
+      }
+
+      .arrow {
+        font-size: 28px;
+        text-decoration: none;
+        color: #A78165;
+        display: inline-block;
+        animation: bounce 1.6s infinite;
+      }
+
+      .arrow:hover {
+        transform: translateY(4px) scale(1.1);
+        color: #000000;
+      }
+
+      .divider {
+        height: 1px;
+        background: #E0CDBD;
+        margin-top: 50px;
+      }
+
+      @keyframes bounce {
+
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+
+        50% {
+          transform: translateY(6px);
+        }
+      }
+
+      @keyframes fadeUp {
+        .from {
+          opacity: 0;
+          transform: translateY(12px);
+        }
+
+        .to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+
+      .main {
+        display: grid;
+        grid-template-columns: 120px 1fr;
+        gap: 100px;
+        padding: 200px 0;
+        align-items: start;
+      }
+
+      .sidebar {
+        position: sticky;
+        top: 120px;
+        font-family: Josefin Sans, sans-serif;
+        font-size: 18px;
+      }
+
+      .sidebar a {
+        display: block;
+        margin-bottom: 18px;
+        text-decoration: none;
+        color: #000000;
+        transition: 0.1s ease;
+      }
+
+      .sidebar a:hover {
+        color: #A78165;
+        text-decoration: underline;
+      }
+
+      .content {
+        max-width: 850px;
+        margin-bottom: 50px;
+        animation: fadeUp 0.8s ease both;
+      }
+
+      .content h2 {
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 24px;
+        color: #A78165;
+        margin-bottom: 30px;
+      }
+
+      .content p {
+        font-family: "Simonetta", serif;
+        font-size: 18px;
+        color: #000000;
+        line-height: 1.5;
+        margin-bottom: 32px;
+      }
+
+      .content img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 1.5rem 0;
+        border-radius: 12px;
+      }
+
+      .content li {
+        font-family: "Simonetta", serif;
+        font-size: 18px;
+        color: #000000;
+        line-height: 1.2;
+        padding-left: 1.2em;
+        margin-bottom: 10px;
+      }
+
+      .user-groups {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+      }
+
+      .content strong {
+        font-family: "Josefin Sans", sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        color: #A78165;
+        margin-bottom: 0px;
+      }
+
+      .image-pair {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        margin: 40px 0;
+      }
+
+      .image-pair img {
+        width: 100%;
+        border-radius: 12px;
+      }
+
+      figure {
+        margin: 0;
+      }
+
+      figcaption {
+        margin-top: 8px;
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 14px;
+        color: #8c7a6b;
+        text-align: center;
+      }
+
+      .mockup-block {
+        max-width: 900px;
+        margin: 40px auto 60px auto;
+        padding: 18px;
+        background: #111;
+        border-radius: 20px;
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+      }
+
+      .scroll-video {
+        width: 100%;
+        border-radius: 12px;
+        display: block;
+      }
+
+      .mockup-block::after {
+        content: "";
+        display: block;
+        margin: 16px auto 0 auto;
+        width: 60%;
+        height: 6px;
+        background: #222;
+        border-radius: 6px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <nav class="header-nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="cv.pdf">Resume</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+
+      <div>
+        <section class="hero">
+          <div>
+            <h1>Coinamatic Web Redesign</h1>
+            <h2>UI / UX Design </h2>
+            <span class="pill">Figma</span>
+            <span class="pill">October 2025</span>
+          </div>
+          <div>
+            <img class="card-img" src="https://i.postimg.cc/d3d9VcNz/Screenshot-2025-11-20-at-12-42-09-PM.png" alt="project1 thumbnail" width="470" height="300">
+          </div>
+        </section>
+
+        <div class="scroll-indicator">
+          <p>See how redesigned website works</p>
+          <a href="#overview" class="arrow">↓</a>
+        </div>
+
+        <section class="main">
+
+          <aside class="sidebar">
+            <a href="#overview">01. Overview</a>
+            <a href="#problem">02. Problem</a>
+            <a href="#challenges">03. Research &amp Analysis</a>
+            <a href="#highlights">04. Ideation &amp Structure Redesign</a>
+            <a href="#improvements">05. Navigation Improvements</a>
+          </aside>
+
+          <div>
+            <section id="overview" class="content">
+              <h2>01. Overview</h2>
+              <p>
+                This project focused on improving the usability, visual consistency, and
+                clarity of an existing laundry service website. I worked as the UX/UI
+                designer, leading the research, analysis, and full visual redesign.
+                <br>
+                The goal was to enhance navigation clarity, strengthen visual hierarchy,
+                improve accessibility, and create a more intuitive overall user experience, especailly
+                for first-time users.
+              </p>
+              <div class="divider"></div>
+            </section>
+
+            <section id="problem" class="content">
+              <h2>02. Problem</h2>
+
+              <p>
+                Although the original website followed a modern visual style and used
+                recognizable brand colors such as navy blue and green, several usability
+                and consistency issues weakened the overall user experience.
+              </p>
+              <p>Key problems included:</p>
+
+              <ul class="problem-list">
+                <li>
+                  <strong>Poor readability:</strong> Machine detail pages used small,
+                  thin fonts, making important information difficult to read.
+                </li>
+
+                <li>
+                  <strong>Inconsistent typography and color usage:</strong> Different
+                  pages applied varying font styles and title colors, breaking visual
+                  consistency across the site.
+                </li>
+
+                <li>
+                  <strong>Inconsistent button design:</strong> Buttons with the same
+                  function appeared in different colors, sizes, corner radius, and text
+                  styles, which confused users.
+                </li>
+
+                <li>
+                  <strong>Weak visual hierarchy:</strong> On pages such as the
+                  sustainability section, subtitles appeared nearly identical to main
+                  headings, reducing clarity.
+                </li>
+
+                <li>
+                  <strong>Layout and spacing issues:</strong> Some sections felt crowded
+                  or misaligned, particularly toward the bottom of pages.
+                </li>
+
+                <li>
+                  <strong>Unclear calls to action:</strong> Actions like “Get a Quote,”
+                  “Contact Us,” and “Request a Service” were not clearly distinguished,
+                  making it difficult for users to identify the next step.
+                </li>
+
+                <li>
+                  <strong>Lack of onboarding content:</strong> The website did not clearly
+                  explain how the system works, leaving first-time users unsure of how to
+                  get started.
+                </li>
+
+                <li>
+                  <strong>Limited responsiveness:</strong> The layout did not consistently
+                  adapt to different screen sizes, impacting usability on smaller devices.
+                </li>
+              </ul>
+
+              <div class="divider"></div>
+            </section>
+
+            <section id="research" class="content">
+              <h2>03. Research &amp Analysis</h2>
+              <p>
+                The original homepage attempted to serve all user groups at once, which
+                resulted in an overwhelming and confusing navigation experience,
+                particularly for new visitors.</p>
+
+              <figure>
+                <img alt="screenshot of the original homescreen" , src="https://i.postimg.cc/65cSWkrM/image.png">
+                <figcaption>header of the original homescreen</figcaption>
+              </figure>
+              <br><br>
+              <p>
+                To better understand the website’s structure, priorities, and user needs,
+                I conducted a focused analysis of:
+              </p>
+              <ul>
+
+                <li>The original navigation bar</li>
+                <li>Key service pathways</li>
+                <li>Quick-access actions and calls to action</li>
+                <li>My own experience as a resident user</li>
+              </ul>
+              <p>From this research, I identified the following user groups:</p>
+              <div class="user-groups">
+                <div class="user-block">
+                  <strong>Primary Users</strong>
+                  <p>
+                    • Residents<br> • Property owners / managers
+                  </p>
+                </div>
+
+                <div class="user-block">
+                  <strong>Secondary Users</strong>
+                  <p>
+                    • Career seekers<br> • Business partners
+                  </p>
+                </div>
+              </div>
+              <div class="divider"></div>
+              </p>
+            </section>
+
+            <section id="Ideation & Structure Redesign" class="content">
+              <h2>04. Ideation &amp Structure Redesign</h2>
+              <div class="image-pair">
+                <figure>
+                  <img src="https://i.postimg.cc/Sxp5stgS/A4-1.png" alt="screenshot of the original homescreen">
+                  <figcaption>Original website sitemap</figcaption>
+                </figure>
+
+                <figure>
+                  <img src="https://i.postimg.cc/P53mcCpg/A4-2.png" alt="Redesigned website sitemap">
+                  <figcaption>Redesigned website sitemap</figcaption>
+                </figure>
+              </div>
+              <p>
+                Instead of designing one homepage for every user, I restructured the homepage
+                into two clear user path cards based on user intent.
+              </p>
+
+              <ul class="key-points">
+                <li>One for Residents</li>
+                <li>One for Owners / Managers</li>
+              </ul>
+              <p>
+                This separates users based on their primary goals instead of forcing all users through the same navigation.
+              </p>
+              <div class="mockup-block">
+                <video class="scroll-video" autoplay muted loop>
+                  <source src="mockup_1.mp4" type="video/mp4">
+                </video>
+              </div>
+
+
+              <p>
+                and each card includes:
+              <ul>
+                <li>A clear title</li>
+                <li>An identifiable icon</li>
+                <li>Supporting text</li>
+                <li>The most relevant features for that user type</li>
+              </ul>
+              <p>Secondary users, such as careers and partners, were moved into the global
+                navigation bar to reduce homepage clutter.
+              </p>
+              </p>
+
+              <div class="divider"></div>
+            </section>
+
+            <section id="UI Design & Visual Consistency" class="content">
+              <h2>05. UI Design &amp Visual Consistency</h2>
+              <p>
+                To fix the inconsistent visual system, the redesign applies:
+              <ul>
+                <li>A consistent typography system</li>
+                <li>Unified button styles</li>
+                <li>Clean brand color usage</li>
+                <li>Improved line height, spacing, and alignment</li>
+              </ul>
+              </p>
+              <figure>
+                <img src="Brand Board.png" alt="new brand board">
+                <figcaption>Redesigned brand board</figcaption>
+              </figure>
+            </section>
+
+          </div>
+      </div>
+  </body>
+</html>
