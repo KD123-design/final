@@ -291,6 +291,8 @@
         grid-template-columns: 1fr 1fr;
         gap: 4rem;
         align-items: start;
+        max-width: 1200px;
+        margin: 0 auto;
       }
 
       .comparison-block {
@@ -300,19 +302,58 @@
       }
 
       .scroll-preview {
-        height: 420px;
-        /* visible window height */
+        position: relative;
+        /* IMPORTANT */
+        height: 440px;
         overflow-y: auto;
-        /* vertical scroll */
         border-radius: 16px;
-        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
         background: #fff;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
       }
 
-      /* image stays full width */
       .scroll-preview img {
         width: 100%;
         display: block;
+      }
+
+      /* Scroll hint pill */
+      .scroll-preview::after {
+        content: "↓ Scroll";
+        position: absolute;
+        bottom: 14px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 0.85rem;
+        font-family: "Josefin Sans", sans-serif;
+        color: #A78165;
+        background: rgba(255, 255, 255, 0.92);
+        padding: 6px 14px;
+        border-radius: 20px;
+        pointer-events: none;
+        animation: scrollHint 1.6s ease-in-out infinite;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+      }
+
+      /* Motion hint */
+      @keyframes scrollHint {
+
+        0%,
+        100% {
+          transform: translate(-50%, 0);
+          opacity: 0.7;
+        }
+
+        50% {
+          transform: translate(-50%, -6px);
+          opacity: 1;
+        }
+      }
+
+      /* Hover interaction */
+      .scroll-preview:hover {
+        transform: translateY(-6px) scale(1.02);
+        box-shadow: 0 24px 48px rgba(0, 0, 0, 0.18);
+        cursor: ns-resize;
       }
     </style>
   </head>
@@ -510,7 +551,7 @@
                 <li>A clear title</li>
                 <li>An identifiable icon</li>
                 <li>Supporting text</li>
-                <li>The most relevant features for that user type</li>
+                <li>The most relevant features for that user type listed out</li>
               </ul>
               <p>Secondary users, such as careers and partners, were moved into the global
                 navigation bar to reduce homepage clutter.
@@ -540,11 +581,10 @@
 
             <section id="navigation-improvements" class="content before-after">
 
-              <!-- BEFORE -->
               <div class="comparison-block">
                 <figure>
                   <div class="scroll-preview">
-                    <img src="nev-b.pdf" alt="Before: “Request Service” “Request Refund” and “Contact Us” all on the same page">
+                    <img src="Nav_b.png" alt="Before: “Request Service” “Request Refund” and “Contact Us” all on the same page">
                   </div>
                   <figcaption>
                     <strong>Before:</strong> “Request Service,” “Request Refund,” and “Contact Us” were placed on the same page without clear differentiation.
@@ -558,21 +598,24 @@
                 </ul>
               </div>
 
-              <!-- AFTER -->
               <div class="comparison-block">
                 <figure>
-                  <img src="Sub_page2.pdf" alt="After design grouped by user type with clear icons and short descriptions">
+                  <div class="scroll-preview">
+                    <img src="Sub_page2.png" alt="After navigation redesign">
+                  </div>
                   <figcaption>
-                    <strong>After:</strong> Actions are grouped by user type (Residents shown), with short descriptions and clear icons.
+                    <strong>After:</strong> Actions are grouped by user type with short descriptions and clear icons.
                   </figcaption>
                 </figure>
 
                 <ul>
-                  <li>Each action clearly explained</li>
-                  <li>Features grouped by user type</li>
-                  <li>Primary vs secondary actions defined</li>
+                  <li>Clear action hierarchy</li>
+                  <li>Reduced cognitive load</li>
+                  <li>Improved scannability</li>
                 </ul>
               </div>
+
+
 
             </section>
 
