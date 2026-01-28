@@ -267,6 +267,53 @@
         background: #222;
         border-radius: 6px;
       }
+
+      .two-column {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+      }
+
+      .two-column .visual,
+      .two-column .text {
+        flex: 1;
+      }
+
+      .two-column img {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+      }
+
+      .before-after {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: start;
+      }
+
+      .comparison-block {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .scroll-preview {
+        height: 420px;
+        /* visible window height */
+        overflow-y: auto;
+        /* vertical scroll */
+        border-radius: 16px;
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+        background: #fff;
+      }
+
+      /* image stays full width */
+      .scroll-preview img {
+        width: 100%;
+        display: block;
+      }
     </style>
   </head>
 
@@ -473,22 +520,63 @@
               <div class="divider"></div>
             </section>
 
-            <section id="UI Design & Visual Consistency" class="content">
-              <h2>05. UI Design &amp Visual Consistency</h2>
-              <p>
-                To fix the inconsistent visual system, the redesign applies:
-              <ul>
-                <li>A consistent typography system</li>
-                <li>Unified button styles</li>
-                <li>Clean brand color usage</li>
-                <li>Improved line height, spacing, and alignment</li>
-              </ul>
-              </p>
-              <figure>
-                <img src="Brand Board.png" alt="new brand board">
+            <section id="ui-design-visual-consistency" class="content two-column">
+              <figure class="visual">
+                <img src="Brand Board.png" alt="Redesigned brand board">
                 <figcaption>Redesigned brand board</figcaption>
               </figure>
+              <div class="text">
+                <h2>05. UI Design &amp; Visual Consistency</h2>
+                <p>To fix the inconsistent visual system, the redesign applies:</p>
+                <ul>
+                  <li>A consistent typography system</li>
+                  <li>Unified button styles</li>
+                  <li>Clean brand color usage</li>
+                  <li>Improved line height, spacing, and alignment</li>
+                </ul>
+              </div>
+              <div class="divider"></div>
             </section>
+
+            <section id="navigation-improvements" class="content before-after">
+
+              <!-- BEFORE -->
+              <div class="comparison-block">
+                <figure>
+                  <div class="scroll-preview">
+                    <img src="nev-b.pdf" alt="Before: “Request Service” “Request Refund” and “Contact Us” all on the same page">
+                  </div>
+                  <figcaption>
+                    <strong>Before:</strong> “Request Service,” “Request Refund,” and “Contact Us” were placed on the same page without clear differentiation.
+                  </figcaption>
+                </figure>
+
+                <ul>
+                  <li>Multiple actions competing for attention</li>
+                  <li>No clear hierarchy</li>
+                  <li>High cognitive load for users</li>
+                </ul>
+              </div>
+
+              <!-- AFTER -->
+              <div class="comparison-block">
+                <figure>
+                  <img src="Sub_page2.pdf" alt="After design grouped by user type with clear icons and short descriptions">
+                  <figcaption>
+                    <strong>After:</strong> Actions are grouped by user type (Residents shown), with short descriptions and clear icons.
+                  </figcaption>
+                </figure>
+
+                <ul>
+                  <li>Each action clearly explained</li>
+                  <li>Features grouped by user type</li>
+                  <li>Primary vs secondary actions defined</li>
+                </ul>
+              </div>
+
+            </section>
+
+
 
           </div>
       </div>
