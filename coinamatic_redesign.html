@@ -1,7 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
+<html lang="en"> 
+    <meta charset="utf-8">
     <!-- created by Kiana Du -->
     <title>Coinmatic redesign – Project Case Study</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Yeseva One|Josefin Sans|Simonetta|Lato|Elsie Swash Caps">
@@ -244,28 +242,26 @@
       }
 
       .mockup-block {
-        max-width: 900px;
-        margin: 40px auto 60px auto;
-        padding: 18px;
-        background: #111;
-        border-radius: 20px;
-        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+        max-width: 720px;
+        width: 100%;
+        margin: 40px 0;
+        padding: 0;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 24px 48px rgba(0, 0, 0, 0.18);
+        display: flex;
+        justify-content: center;
       }
 
       .scroll-video {
         width: 100%;
-        border-radius: 12px;
         display: block;
+        border-radius: 12px;
       }
 
-      .mockup-block::after {
-        content: "";
-        display: block;
-        margin: 16px auto 0 auto;
-        width: 60%;
-        height: 6px;
-        background: #222;
-        border-radius: 6px;
+      .mockup-block:hover {
+        transform: translateY(-6px) scale(1.02);
+        box-shadow: 0 24px 48px rgba(0, 0, 0, 0.18);
       }
 
       .two-column {
@@ -293,6 +289,7 @@
         align-items: start;
         max-width: 1200px;
         margin: 0 auto;
+        position: relative;
       }
 
       .comparison-block {
@@ -303,7 +300,6 @@
 
       .scroll-preview {
         position: relative;
-        /* IMPORTANT */
         height: 440px;
         overflow-y: auto;
         border-radius: 16px;
@@ -334,7 +330,6 @@
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
       }
 
-      /* Motion hint */
       @keyframes scrollHint {
 
         0%,
@@ -349,7 +344,6 @@
         }
       }
 
-      /* Hover interaction */
       .scroll-preview:hover {
         transform: translateY(-6px) scale(1.02);
         box-shadow: 0 24px 48px rgba(0, 0, 0, 0.18);
@@ -376,7 +370,7 @@
             <span class="pill">October 2025</span>
           </div>
           <div>
-            <img class="card-img" src="https://i.postimg.cc/d3d9VcNz/Screenshot-2025-11-20-at-12-42-09-PM.png" alt="project1 thumbnail" width="470" height="300">
+            <img class="card-img" src="Thumbnail.png" alt="project1 thumbnail" width="470" height="300">
           </div>
         </section>
 
@@ -390,9 +384,12 @@
           <aside class="sidebar">
             <a href="#overview">01. Overview</a>
             <a href="#problem">02. Problem</a>
-            <a href="#challenges">03. Research &amp Analysis</a>
-            <a href="#highlights">04. Ideation &amp Structure Redesign</a>
-            <a href="#improvements">05. Navigation Improvements</a>
+            <a href="#research">03. Research &amp; Analysis</a>
+            <a href="#Ideation &amp; Structure Redesign">04. Ideation &amp; Structure Redesign</a>
+            <a href="#ui-design">05. Visual Identity</a>
+            <a href="#navigationimprovements">06. Navigation Redesign</a>
+            <a href="#system-improvements">07. UX Refinement</a>
+            <a href="#final-design">08. Final Design</a>
           </aside>
 
           <div>
@@ -471,14 +468,14 @@
             </section>
 
             <section id="research" class="content">
-              <h2>03. Research &amp Analysis</h2>
+              <h2>03. Research &amp; Analysis</h2>
               <p>
                 The original homepage attempted to serve all user groups at once, which
                 resulted in an overwhelming and confusing navigation experience,
                 particularly for new visitors.</p>
 
               <figure>
-                <img alt="screenshot of the original homescreen" , src="https://i.postimg.cc/65cSWkrM/image.png">
+                <img alt="screenshot of the original homescreen" src="https://i.postimg.cc/65cSWkrM/image.png">
                 <figcaption>header of the original homescreen</figcaption>
               </figure>
               <br><br>
@@ -510,11 +507,10 @@
                 </div>
               </div>
               <div class="divider"></div>
-              </p>
             </section>
 
-            <section id="Ideation & Structure Redesign" class="content">
-              <h2>04. Ideation &amp Structure Redesign</h2>
+            <section id="Ideation &amp; Structure Redesign" class="content">
+              <h2>04. Ideation &amp; Structure Redesign</h2>
               <div class="image-pair">
                 <figure>
                   <img src="https://i.postimg.cc/Sxp5stgS/A4-1.png" alt="screenshot of the original homescreen">
@@ -539,7 +535,7 @@
                 This separates users based on their primary goals instead of forcing all users through the same navigation.
               </p>
               <div class="mockup-block">
-                <video class="scroll-video" autoplay muted loop>
+                <video class="scroll-video" autoplay="" muted="" loop="">
                   <source src="mockup_1.mp4" type="video/mp4">
                 </video>
               </div>
@@ -547,7 +543,7 @@
 
               <p>
                 and each card includes:
-              <ul>
+              </p><ul>
                 <li>A clear title</li>
                 <li>An identifiable icon</li>
                 <li>Supporting text</li>
@@ -556,72 +552,123 @@
               <p>Secondary users, such as careers and partners, were moved into the global
                 navigation bar to reduce homepage clutter.
               </p>
+              <p></p>
+
+              <div class="divider"></div>
+            </section>
+
+            <section id="ui-design" class="content">
+
+              <div class="two-column">
+                <figure class="visual">
+                  <img src="brand_board.png" alt="Redesigned brand board">
+                  <figcaption>Redesigned brand board</figcaption>
+                </figure>
+
+                <div class="text">
+                  <h2>05. UI Design &amp; Visual Consistency</h2>
+                  <p>To fix the inconsistent visual system, the redesign applies:</p>
+                  <ul>
+                    <li>A consistent typography system</li>
+                    <li>Unified button styles</li>
+                    <li>Clean brand color usage</li>
+                    <li>Improved line height, spacing, and alignment</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="divider"></div>
+
+            </section>
+
+
+
+            <section id="navigationimprovements" class="content">
+              <h2>06. Navigation Improvements</h2>
+
+              <div class="before-after">
+                <div class="comparison-block">
+                  <figure>
+                    <div class="scroll-preview">
+                      <img src="Nav_b.png" alt="Before: “Request Service” “Request Refund” and “Contact Us” all on the same page">
+                    </div>
+                    <figcaption>
+                      <strong>Before:</strong>
+                      <br>“Request Service,” “Request Refund,” and “Contact Us” were placed on the same page without clear differentiation.
+                    </figcaption>
+                  </figure>
+
+                  <ul>
+                    <li>Multiple actions competing for attention</li>
+                    <li>No clear hierarchy</li>
+                    <li>High cognitive load for users</li>
+                  </ul>
+                </div>
+
+                <div class="comparison-block">
+                  <figure>
+                    <div class="scroll-preview">
+                      <img src="Sub_page2.png" alt="After navigation redesign">
+                    </div>
+                    <figcaption>
+                      <strong>After:</strong>
+                      <br>Actions are grouped by user type with short descriptions and clear icons.
+                    </figcaption>
+                  </figure>
+
+                  <ul>
+                    <li>Clear action hierarchy</li>
+                    <li>Reduced cognitive load</li>
+                    <li>Improved scannability</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="divider"></div>
+            </section>
+
+            <section id="system-improvements" class="content">
+              <h2>07. System-Wide UX Improvements</h2>
+              <p>
+                Beyond navigation restructuring, several system-level UX improvements were applied
+                to improve accessibility, clarity, and user confidence across the website.
               </p>
 
+              <ul>
+                <li>
+                  <strong>Bilingual toggle visibility:</strong>
+                  The EN/FR language switch was moved to the top-right corner to align with user expectations
+                  and improve discoverability.
+                </li>
+
+                <li>
+                  <strong>Improved call-to-action placement:</strong>
+                  “Get a Quote” buttons were added at both the beginning and end of the owners’ page,
+                  allowing property owners and managers to contact the company at key decision points.
+                </li>
+
+                <li>
+                  <strong>Enhanced footer information:</strong>
+                  Full office contact details were added to the owners’ page footer to improve accessibility,
+                  trust, and transparency.
+                </li>
+              </ul>
+
               <div class="divider"></div>
             </section>
 
-            <section id="ui-design-visual-consistency" class="content two-column">
-              <figure class="visual">
-                <img src="Brand Board.png" alt="Redesigned brand board">
-                <figcaption>Redesigned brand board</figcaption>
-              </figure>
-              <div class="text">
-                <h2>05. UI Design &amp; Visual Consistency</h2>
-                <p>To fix the inconsistent visual system, the redesign applies:</p>
-                <ul>
-                  <li>A consistent typography system</li>
-                  <li>Unified button styles</li>
-                  <li>Clean brand color usage</li>
-                  <li>Improved line height, spacing, and alignment</li>
-                </ul>
+            <section id="final-design" class="content">
+              <h2>08. Final Design</h2>
+              <div class="mockup-block">
+                <video class="scroll-video" autoplay="" muted="" loop="">
+                  <source src="final_design.mp4" type="video/mp4">
+                </video>
               </div>
+
               <div class="divider"></div>
-            </section>
+        </section>
 
-            <section id="navigation-improvements" class="content before-after">
-
-              <div class="comparison-block">
-                <figure>
-                  <div class="scroll-preview">
-                    <img src="Nav_b.png" alt="Before: “Request Service” “Request Refund” and “Contact Us” all on the same page">
-                  </div>
-                  <figcaption>
-                    <strong>Before:</strong> “Request Service,” “Request Refund,” and “Contact Us” were placed on the same page without clear differentiation.
-                  </figcaption>
-                </figure>
-
-                <ul>
-                  <li>Multiple actions competing for attention</li>
-                  <li>No clear hierarchy</li>
-                  <li>High cognitive load for users</li>
-                </ul>
-              </div>
-
-              <div class="comparison-block">
-                <figure>
-                  <div class="scroll-preview">
-                    <img src="Sub_page2.png" alt="After navigation redesign">
-                  </div>
-                  <figcaption>
-                    <strong>After:</strong> Actions are grouped by user type with short descriptions and clear icons.
-                  </figcaption>
-                </figure>
-
-                <ul>
-                  <li>Clear action hierarchy</li>
-                  <li>Reduced cognitive load</li>
-                  <li>Improved scannability</li>
-                </ul>
-              </div>
-
-
-
-            </section>
-
-
-
-          </div>
       </div>
-  </body>
-</html>
+    </section></div>
+  
+</div><gdiv class="ginger-extension-writer" style="display: none;"><gdiv class="ginger-extension-writer-frame"><iframe src="chrome-extension://kdfieneakcjfaiglcfcgkidlkmlijjnh/writer/index.html"></iframe></gdiv></gdiv></body></html>
+
