@@ -1,355 +1,355 @@
-<html lang="en"> 
-    <meta charset="utf-8">
-    <!-- created by Kiana Du -->
-    <title>Coinmatic redesign – Project Case Study</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Yeseva One|Josefin Sans|Simonetta|Lato|Elsie Swash Caps">
-    <style>
-      body {
-        background-color: #EFE3D9
+<html lang="en">
+  <meta charset="utf-8">
+  <!-- created by Kiana Du -->
+  <title>Coinmatic redesign – Project Case Study</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Yeseva One|Josefin Sans|Simonetta|Lato|Elsie Swash Caps">
+  <style>
+    body {
+      background-color: #EFE3D9
+    }
+
+    .container {
+      width: 1200px;
+      margin: 55px 120px 55px 120px;
+    }
+
+    .nav-link {
+      color: #000000;
+      font-size: 16px;
+      font-family: "Lato", Monospace;
+      padding: 10px 20px;
+      border-radius: 23px;
+      border: 2px solid transparent;
+      text-decoration: none;
+    }
+
+    .nav-link:hover {
+      border-color: #A78165;
+      font-weight: bold;
+      color: #A78165;
+    }
+
+    .header-nav {
+      display: flex;
+      justify-content: flex-end;
+      gap: 30px;
+      margin-right: 30px;
+    }
+
+    .footer-nav {
+      display: flex;
+      gap: 30px;
+      margin-left: 30px;
+    }
+
+    .hero {
+      padding: 100px 130px 100px 130px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+    .hero h1 {
+      font-family: Yeseva One, serif;
+      font-size: 40px;
+      margin-bottom: 8px;
+      font-weight: normal;
+    }
+
+    .hero h2 {
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 24px;
+      color: #A78165;
+      margin-bottom: 24px;
+    }
+
+    .pill {
+      display: inline-block;
+      background: #E6CDBA;
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-right: 8px;
+      font-family: "Simonetta", serif;
+      font-size: 20px;
+      color: #000000;
+    }
+
+    .hero img {
+      border-radius: 20px;
+    }
+
+    .scroll-indicator {
+      margin-top: 60px;
+      text-align: center;
+      font-family: "Josefin Sans", sans-serif;
+      color: #A78165;
+      opacity: 90%;
+      margin-left: auto;
+    }
+
+
+    .scroll-indicator p {
+      font-size: 18px;
+    }
+
+    .arrow {
+      font-size: 28px;
+      text-decoration: none;
+      color: #A78165;
+      display: inline-block;
+      animation: bounce 1.6s infinite;
+    }
+
+    .arrow:hover {
+      transform: translateY(4px) scale(1.1);
+      color: #000000;
+    }
+
+    .divider {
+      height: 1px;
+      background: #E0CDBD;
+      margin-top: 50px;
+    }
+
+    @keyframes bounce {
+
+      0%,
+      100% {
+        transform: translateY(0);
       }
 
-      .container {
-        width: 1200px;
-        margin: 55px 120px 55px 120px;
+      50% {
+        transform: translateY(6px);
+      }
+    }
+
+    @keyframes fadeUp {
+      .from {
+        opacity: 0;
+        transform: translateY(12px);
       }
 
-      .nav-link {
-        color: #000000;
-        font-size: 16px;
-        font-family: "Lato", Monospace;
-        padding: 10px 20px;
-        border-radius: 23px;
-        border: 2px solid transparent;
-        text-decoration: none;
+      .to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+
+    .main {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 100px;
+      padding: 200px 0;
+      align-items: start;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 120px;
+      font-family: Josefin Sans, sans-serif;
+      font-size: 18px;
+    }
+
+    .sidebar a {
+      display: block;
+      margin-bottom: 18px;
+      text-decoration: none;
+      color: #000000;
+      transition: 0.1s ease;
+    }
+
+    .sidebar a:hover {
+      color: #A78165;
+      text-decoration: underline;
+    }
+
+    .content {
+      max-width: 850px;
+      margin-bottom: 50px;
+      animation: fadeUp 0.8s ease both;
+    }
+
+    .content h2 {
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 24px;
+      color: #A78165;
+      margin-bottom: 30px;
+    }
+
+    .content p {
+      font-family: "Simonetta", serif;
+      font-size: 18px;
+      color: #000000;
+      line-height: 1.5;
+      margin-bottom: 32px;
+    }
+
+    .content img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1.5rem 0;
+      border-radius: 12px;
+    }
+
+    .content li {
+      font-family: "Simonetta", serif;
+      font-size: 18px;
+      color: #000000;
+      line-height: 1.2;
+      padding-left: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    .user-groups {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+
+    .content strong {
+      font-family: "Josefin Sans", sans-serif;
+      font-weight: 600;
+      font-size: 20px;
+      color: #A78165;
+      margin-bottom: 0px;
+    }
+
+    .image-pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin: 40px 0;
+    }
+
+    .image-pair img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    figure {
+      margin: 0;
+    }
+
+    figcaption {
+      margin-top: 8px;
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 14px;
+      color: #8c7a6b;
+      text-align: center;
+    }
+
+    .mockup-block {
+      max-width: 720px;
+      width: 100%;
+      margin: 40px 0;
+      padding: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.18);
+      display: flex;
+      justify-content: center;
+    }
+
+    .scroll-video {
+      width: 100%;
+      display: block;
+      border-radius: 12px;
+    }
+
+    .mockup-block:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.18);
+    }
+
+    .two-column {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4rem;
+    }
+
+    .two-column .visual,
+    .two-column .text {
+      flex: 1;
+    }
+
+    .two-column img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+    }
+
+    .before-after {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .comparison-block {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .scroll-preview {
+      position: relative;
+      height: 440px;
+      overflow-y: auto;
+      border-radius: 16px;
+      background: #fff;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .scroll-preview img {
+      width: 100%;
+      display: block;
+    }
+
+    /* Scroll hint pill */
+    .scroll-preview::after {
+      content: "↓ Scroll";
+      position: absolute;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.85rem;
+      font-family: "Josefin Sans", sans-serif;
+      color: #A78165;
+      background: rgba(255, 255, 255, 0.92);
+      padding: 6px 14px;
+      border-radius: 20px;
+      pointer-events: none;
+      animation: scrollHint 1.6s ease-in-out infinite;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    }
+
+    @keyframes scrollHint {
+
+      0%,
+      100% {
+        transform: translate(-50%, 0);
+        opacity: 0.7;
       }
 
-      .nav-link:hover {
-        border-color: #A78165;
-        font-weight: bold;
-        color: #A78165;
+      50% {
+        transform: translate(-50%, -6px);
+        opacity: 1;
       }
+    }
 
-      .header-nav {
-        display: flex;
-        justify-content: flex-end;
-        gap: 30px;
-        margin-right: 30px;
-      }
-
-      .footer-nav {
-        display: flex;
-        gap: 30px;
-        margin-left: 30px;
-      }
-
-      .hero {
-        padding: 100px 130px 100px 130px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        margin-top: 50px;
-      }
-
-      .hero h1 {
-        font-family: Yeseva One, serif;
-        font-size: 40px;
-        margin-bottom: 8px;
-        font-weight: normal;
-      }
-
-      .hero h2 {
-        font-family: "Josefin Sans", sans-serif;
-        font-size: 24px;
-        color: #A78165;
-        margin-bottom: 24px;
-      }
-
-      .pill {
-        display: inline-block;
-        background: #E6CDBA;
-        padding: 6px 14px;
-        border-radius: 20px;
-        margin-right: 8px;
-        font-family: "Simonetta", serif;
-        font-size: 20px;
-        color: #000000;
-      }
-
-      .hero img {
-        border-radius: 20px;
-      }
-
-      .scroll-indicator {
-        margin-top: 60px;
-        text-align: center;
-        font-family: "Josefin Sans", sans-serif;
-        color: #A78165;
-        opacity: 90%;
-        margin-left: auto;
-      }
-
-
-      .scroll-indicator p {
-        font-size: 18px;
-      }
-
-      .arrow {
-        font-size: 28px;
-        text-decoration: none;
-        color: #A78165;
-        display: inline-block;
-        animation: bounce 1.6s infinite;
-      }
-
-      .arrow:hover {
-        transform: translateY(4px) scale(1.1);
-        color: #000000;
-      }
-
-      .divider {
-        height: 1px;
-        background: #E0CDBD;
-        margin-top: 50px;
-      }
-
-      @keyframes bounce {
-
-        0%,
-        100% {
-          transform: translateY(0);
-        }
-
-        50% {
-          transform: translateY(6px);
-        }
-      }
-
-      @keyframes fadeUp {
-        .from {
-          opacity: 0;
-          transform: translateY(12px);
-        }
-
-        .to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-
-      .main {
-        display: grid;
-        grid-template-columns: 120px 1fr;
-        gap: 100px;
-        padding: 200px 0;
-        align-items: start;
-      }
-
-      .sidebar {
-        position: sticky;
-        top: 120px;
-        font-family: Josefin Sans, sans-serif;
-        font-size: 18px;
-      }
-
-      .sidebar a {
-        display: block;
-        margin-bottom: 18px;
-        text-decoration: none;
-        color: #000000;
-        transition: 0.1s ease;
-      }
-
-      .sidebar a:hover {
-        color: #A78165;
-        text-decoration: underline;
-      }
-
-      .content {
-        max-width: 850px;
-        margin-bottom: 50px;
-        animation: fadeUp 0.8s ease both;
-      }
-
-      .content h2 {
-        font-family: "Josefin Sans", sans-serif;
-        font-size: 24px;
-        color: #A78165;
-        margin-bottom: 30px;
-      }
-
-      .content p {
-        font-family: "Simonetta", serif;
-        font-size: 18px;
-        color: #000000;
-        line-height: 1.5;
-        margin-bottom: 32px;
-      }
-
-      .content img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin: 1.5rem 0;
-        border-radius: 12px;
-      }
-
-      .content li {
-        font-family: "Simonetta", serif;
-        font-size: 18px;
-        color: #000000;
-        line-height: 1.2;
-        padding-left: 1.2em;
-        margin-bottom: 10px;
-      }
-
-      .user-groups {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 60px;
-      }
-
-      .content strong {
-        font-family: "Josefin Sans", sans-serif;
-        font-weight: 600;
-        font-size: 20px;
-        color: #A78165;
-        margin-bottom: 0px;
-      }
-
-      .image-pair {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-        margin: 40px 0;
-      }
-
-      .image-pair img {
-        width: 100%;
-        border-radius: 12px;
-      }
-
-      figure {
-        margin: 0;
-      }
-
-      figcaption {
-        margin-top: 8px;
-        font-family: "Josefin Sans", sans-serif;
-        font-size: 14px;
-        color: #8c7a6b;
-        text-align: center;
-      }
-
-      .mockup-block {
-        max-width: 720px;
-        width: 100%;
-        margin: 40px 0;
-        padding: 0;
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 24px 48px rgba(0, 0, 0, 0.18);
-        display: flex;
-        justify-content: center;
-      }
-
-      .scroll-video {
-        width: 100%;
-        display: block;
-        border-radius: 12px;
-      }
-
-      .mockup-block:hover {
-        transform: translateY(-6px) scale(1.02);
-        box-shadow: 0 24px 48px rgba(0, 0, 0, 0.18);
-      }
-
-      .two-column {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 4rem;
-      }
-
-      .two-column .visual,
-      .two-column .text {
-        flex: 1;
-      }
-
-      .two-column img {
-        width: 100%;
-        max-width: 500px;
-        height: auto;
-      }
-
-      .before-after {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        align-items: start;
-        max-width: 1200px;
-        margin: 0 auto;
-        position: relative;
-      }
-
-      .comparison-block {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-      }
-
-      .scroll-preview {
-        position: relative;
-        height: 440px;
-        overflow-y: auto;
-        border-radius: 16px;
-        background: #fff;
-        transition: transform 0.25s ease, box-shadow 0.25s ease;
-      }
-
-      .scroll-preview img {
-        width: 100%;
-        display: block;
-      }
-
-      /* Scroll hint pill */
-      .scroll-preview::after {
-        content: "↓ Scroll";
-        position: absolute;
-        bottom: 14px;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 0.85rem;
-        font-family: "Josefin Sans", sans-serif;
-        color: #A78165;
-        background: rgba(255, 255, 255, 0.92);
-        padding: 6px 14px;
-        border-radius: 20px;
-        pointer-events: none;
-        animation: scrollHint 1.6s ease-in-out infinite;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-      }
-
-      @keyframes scrollHint {
-
-        0%,
-        100% {
-          transform: translate(-50%, 0);
-          opacity: 0.7;
-        }
-
-        50% {
-          transform: translate(-50%, -6px);
-          opacity: 1;
-        }
-      }
-
-      .scroll-preview:hover {
-        transform: translateY(-6px) scale(1.02);
-        box-shadow: 0 24px 48px rgba(0, 0, 0, 0.18);
-        cursor: ns-resize;
-      }
-    </style>
+    .scroll-preview:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.18);
+      cursor: ns-resize;
+    }
+  </style>
   </head>
 
   <body>
@@ -543,7 +543,8 @@
 
               <p>
                 and each card includes:
-              </p><ul>
+              </p>
+              <ul>
                 <li>A clear title</li>
                 <li>An identifiable icon</li>
                 <li>Supporting text</li>
@@ -665,10 +666,15 @@
               </div>
 
               <div class="divider"></div>
+            </section>
+
+          </div>
         </section>
-
       </div>
-    </section></div>
-  
-</div><gdiv class="ginger-extension-writer" style="display: none;"><gdiv class="ginger-extension-writer-frame"><iframe src="chrome-extension://kdfieneakcjfaiglcfcgkidlkmlijjnh/writer/index.html"></iframe></gdiv></gdiv></body></html>
 
+    </div>
+    <gdiv class="ginger-extension-writer" style="display: none;">
+      <gdiv class="ginger-extension-writer-frame"><iframe src="chrome-extension://kdfieneakcjfaiglcfcgkidlkmlijjnh/writer/index.html"></iframe></gdiv>
+    </gdiv>
+  </body>
+</html>
