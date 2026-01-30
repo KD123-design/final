@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <!-- created by Kiana Du -->
-    <title>Conatct</title>
+    <title>Contact</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Yeseva One|Josefin Sans|Simonetta|lato|Elsie Swash Caps">
     <style>
       body {
@@ -145,16 +145,20 @@
       <div class="contact-card">
         <img class="contact-image" src="https://i.postimg.cc/KzdrzPtN/IMG-9209.jpg" alt="a nature pic of treees taken by the web builder">
         <div class="contact-text">
-          <h2>Email</h2>
-          <input type="email" placeholder="Your email">
+  <form action="https://formspree.io/f/xjgrjgoz" method="POST">
+    
+    <h2>Email</h2>
+    <input type="email" name="email" placeholder="Your email" required>
 
-          <h2>Name</h2>
-          <input type="text" placeholder="Your name">
+    <h2>Name</h2>
+    <input type="text" name="name" placeholder="Your name" required>
 
-          <h2>Message</h2>
-          <textarea placeholder="Write your message here"></textarea>
-          <button class="send-btn">Send</button>
-        </div>
+    <h2>Message</h2>
+    <textarea name="message" placeholder="Write your message here" required></textarea>
+    
+    <button type="submit" class="send-btn">Send</button>
+  </form>
+</div>
       </div>
 
       <nav class="footer-nav">
